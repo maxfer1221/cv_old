@@ -1,0 +1,190 @@
+body {
+  background: #ececec;
+  color: #222831;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+}
+
+a {
+
+}
+
+h1 {
+}
+
+h3 {
+  font-size: 2em;
+}
+
+li {
+}
+
+p {
+  font-size: 1.2em;
+}
+
+th {
+  font-size: 1.2em;
+}
+
+td {
+  font-size: 1.2em;
+}
+
+#top-bar {
+  background-color: #222831;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+}
+
+/* #top-bar:hover {
+  background-color: #222831;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  display: none;
+} */
+
+#topImage {
+  background: url('../images/josh-rose-9YQGFzg0RiM-unsplash.png');
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  -webkit-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  -moz-box-shadow: inset 0px 112px 48px -77px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 112px 48px -77px rgba(0,0,0,0.7);
+}
+
+#canvas {
+  background-color: white;
+}
+
+.social-media-icon {
+  max-width: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  padding: 0;
+  display: inline;
+  height: 30%;
+}
+
+.social-media-icons-div {
+  text-align: right;
+}
+
+.infotable {
+  margin: auto;
+  background: rgba(222, 227, 226, .85);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 25px;
+  width: 40%;
+  color: #222831;
+  -webkit-box-shadow: 0px 0px 30px 16px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 30px 16px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 30px 16px rgba(0,0,0,0.75);
+}
+
+.community-service-table {
+  border-collapse: collapse;
+  border: 1px solid #222831;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-service-table-item {
+  border-collapse: collapse;
+  border: 1px solid #222831;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-service-table-header {
+  background-color: #222831;
+  color: #ececec;
+  height: 40px;
+  width: 150px;
+  border-collapse: collapse;
+  border: 1px solid #222831;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills-table {
+  margin: 0 auto;
+}
+
+
+.divider {
+  background-color: #222831;
+  width: 100%;
+  height: 120px;
+  -webkit-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  -moz-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+}
+
+.div-edu {
+  -webkit-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  -moz-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  font-style: : #222831;
+}
+
+.div-hon {
+  -webkit-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  -moz-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  font-style: : #222831;
+}
+
+.div-ser {
+  -webkit-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  -moz-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-style: : #222831;
+}
+
+.div-js {
+  -webkit-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  -moz-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  font-style: : #222831;
+}
+
+.div-skill {
+  -webkit-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  -moz-box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 112px 30px -77px rgba(0,0,0,0.7);
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  font-style: : #222831;
+}
+
+.personal-picture {
+  -webkit-box-shadow: 0px 0px 70px 15px rgba(0,0,0,0.69);
+  -moz-box-shadow: 0px 0px 70px 15px rgba(0,0,0,0.69);
+  box-shadow: 0px 0px 70px 15px rgba(0,0,0,0.69);
+  max-width: 300px;
+  border-radius: 300px;
+  border: 5px solid #222831;
+}
