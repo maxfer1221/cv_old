@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>A-Star</title>
+        <link rel="stylesheet" href="css/master.css">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/8081db09b6.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pathfinding.js"></script>
+    </head>
+    <body>
+        <div id="arrow-holder" class="arrow-holder">
+            <i onclick="activateArrow()" id="arrow-down" class="fas fa-chevron-down fa-2x"></i>
+            <i onclick="activateArrow()" id="arrow-up" class="fas fa-chevron-up fa-2x"></i>
+        </div>
+        <div id="toolBar" class="tool-menu">
+            <i onclick="resetProgram()" id="reset-tool" class="fas fa-undo tool-icon fa-3x"></i>
+            <i onclick="activate('start-tool')" id="start-tool" class="fas fa-flag tool-icon fa-3x"></i>
+            <i onclick="activate('target-tool')" id="target-tool" class="fas fa-flag-checkered tool-icon fa-3x"></i>
+            <i onclick="activate('barrier-tool')" id="barrier-tool" class="fas fa-th-large tool-icon fa-3x"></i>
+            <i onclick="activate('eraser-tool')" id="eraser-tool" class="fas fa-eraser tool-icon fa-3x"></i>
+            <i onclick="startPathFinding()" id="play-tool" class="fas fa-play tool-icon fa-3x"></i>
+        </div>
+        <canvas id="canvas"></canvas>
+        <script type="text/javascript" src="canvas.js"></script>
+    </body>
+</html>
