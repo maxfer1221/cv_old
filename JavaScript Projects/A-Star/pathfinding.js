@@ -50,9 +50,18 @@ function stepIntoNode(currNode){
     for(let i = currNode.col - 1; i <= currNode.col + 1; i++){
         for(let j = currNode.row - 1; j <= currNode.row + 1; j++){
             workingNode = grid[j][i];
-            if(workingNode.type == 5 || workingNode.type == 1){
+            if(workingNode.type == 1){
                 continue;
-            } else if(workingNode.type == 0){
+            } if(workingNode.type == 5 && workingNode != currNode){
+                pNTemp = workingNode.pNode;
+                workingNode.pNode = currNode;
+                if(calcG(workingNode) > workingNode.g){
+                    workingNode.pNode = pNTemp;
+                } else {
+                    workingNode.g = calcG(workingNode);
+                }
+            }
+            else if(workingNode.type == 0){
                 workingNode.pNode = currNode;
                 workingNode.type = 4;
                 workingNode.color = open_col;
@@ -92,17 +101,3 @@ function calcG(node){
 function calcT(node){
     return node.h + node.g;
 }
-
-// function calcHAcc(node){
-//     dist = Math.sqrt(Math.pow(node.row - trgt.row, 2) + Math.pow(node.col - trgt.col, 2));
-//     return Math.floor(dist*10000);
-// }
-//
-// function calcGAcc(node){
-//     dist = Math.sqrt(Math.pow(node.row - strt.row, 2) + Math.pow(node.col - strt.col, 2));
-//     return Math.floor(dist*10000);
-// }
-//
-// function calcTAcc(node){
-//     return calcGAcc(node) + calcHAcc(node);
-// }
