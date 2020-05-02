@@ -53,13 +53,13 @@ function stepIntoNode(currNode){
             if(workingNode.type == 5 || workingNode.type == 1){
                 continue;
             } else if(workingNode.type == 0){
+                workingNode.pNode = currNode;
                 workingNode.type = 4;
                 workingNode.color = open_col;
                 workingNode.g = calcG(workingNode);
                 workingNode.h = calcH(workingNode);
                 workingNode.t = calcT(workingNode);
                 openNodes.push(workingNode);
-                workingNode.pNode = currNode;
             } else if(workingNode.type == 4){
                 continue;
             } else if(workingNode.type == 2){
@@ -74,7 +74,7 @@ function stepIntoNode(currNode){
         }
     }
     openNodes.splice(openNodes.indexOf(currNode), 1);
-
+    closedNodes.push(currNode);
 }
 
 //calulate h, g and total costs, respectively
@@ -84,10 +84,25 @@ function calcH(node){
 }
 
 function calcG(node){
-    dist = Math.sqrt(Math.pow(node.row - strt.row, 2) + Math.pow(node.col - strt.col, 2));
-    return Math.floor(dist*10);
+    dist = Math.sqrt(Math.pow(node.row - node.pNode.row, 2) + Math.pow(node.col - node.pNode.col, 2));
+    if(node.pNode.g === undefined){return Math.floor(dist*10)}
+    return Math.floor(dist*10) + node.pNode.g;
 }
 
 function calcT(node){
     return node.h + node.g;
 }
+
+// function calcHAcc(node){
+//     dist = Math.sqrt(Math.pow(node.row - trgt.row, 2) + Math.pow(node.col - trgt.col, 2));
+//     return Math.floor(dist*10000);
+// }
+//
+// function calcGAcc(node){
+//     dist = Math.sqrt(Math.pow(node.row - strt.row, 2) + Math.pow(node.col - strt.col, 2));
+//     return Math.floor(dist*10000);
+// }
+//
+// function calcTAcc(node){
+//     return calcGAcc(node) + calcHAcc(node);
+// }
