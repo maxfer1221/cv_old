@@ -200,31 +200,33 @@ function drawGrid(){
 function animate(){
     c.clearRect(-1, -1, SIZE*(COLUMNS + 1), SIZE*(ROWS + 1));
 
-    if(mouse.pressed && !pathFindingStarted){
-        currCell = grid[Math.floor(mouse.y/SIZE)][Math.floor(mouse.x/SIZE)];
-        if(toolArray[1].active && !startPlaced && !mouse.toolBar && currCell.type == 0){
-            startPlaced = true;
-            currCell.type = 1;
-            currCell.color = start_col;
-        } else if(toolArray[2].active && !targetPlaced && !mouse.toolBar && currCell.type == 0){
-            targetPlaced = true;
-            currCell.type = 2;
-            currCell.color = target_col;
-        } else if(toolArray[3].active && !mouse.toolBar && currCell.type == 0){
-            currCell.type = 3;
-            currCell.color = barrier_col;
-        } else if(toolArray[4].active && !mouse.toolBar){
-            if(currCell.type==1){
-                startPlaced = false;
-                currCell.type = 0;
-                currCell.color = unobserved_col;
-            } else if(currCell.type==2){
-                targetPlaced = false;
-                currCell.type = 0;
-                currCell.color = unobserved_col;
-            } else if(currCell.type==3){
-                currCell.type = 0;
-                currCell.color = unobserved_col;
+    if(mouse.x > 0 && mouse.y > 0 && mouse.x < COLUMNS*SIZE && mouse.y < ROWS*SIZE){
+        if(mouse.pressed && !pathFindingStarted){
+            currCell = grid[Math.floor(mouse.y/SIZE)][Math.floor(mouse.x/SIZE)];
+            if(toolArray[1].active && !startPlaced && !mouse.toolBar && currCell.type == 0){
+                startPlaced = true;
+                currCell.type = 1;
+                currCell.color = start_col;
+            } else if(toolArray[2].active && !targetPlaced && !mouse.toolBar && currCell.type == 0){
+                targetPlaced = true;
+                currCell.type = 2;
+                currCell.color = target_col;
+            } else if(toolArray[3].active && !mouse.toolBar && currCell.type == 0){
+                currCell.type = 3;
+                currCell.color = barrier_col;
+            } else if(toolArray[4].active && !mouse.toolBar){
+                if(currCell.type==1){
+                    startPlaced = false;
+                    currCell.type = 0;
+                    currCell.color = unobserved_col;
+                } else if(currCell.type==2){
+                    targetPlaced = false;
+                    currCell.type = 0;
+                    currCell.color = unobserved_col;
+                } else if(currCell.type==3){
+                    currCell.type = 0;
+                    currCell.color = unobserved_col;
+                }
             }
         }
     }
