@@ -223,7 +223,7 @@ function animate(){
                     targetPlaced = false;
                     currCell.type = 0;
                     currCell.color = unobserved_col;
-                } else if(currCell.type==3){
+                } else if(currCell.type==3 && currCell.col != 0 && currCell.col != COLUMNS - 1 && currCell.row != 0 && currCell.row != ROWS - 1){
                     currCell.type = 0;
                     currCell.color = unobserved_col;
                 }
