@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    overflow: hidden;
+
+}
+
+canvas {
+    background: #100303;
+}
+
+.range {
+    background: #111;
+    height: 2px;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.range-holder {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+}
+
+.btn {
+    margin-left:20px;
+}
+
+.navbar-nav > li {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+#ex1Slider .slider-selection {
+	background: #BABABA;
+}
+
+#sort-button {
+    width: 140px;
+}
