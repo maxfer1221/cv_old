@@ -19,6 +19,7 @@ let bubble_index_old = 0;
 let bubble_index2 = 0;
 let bubble_index2_old = 0;
 let swaps = 0;
+let bubble_iterations = 0;
 
 //selection
 let min = undefined;
@@ -26,6 +27,10 @@ let selection_index = 0;
 let min_index = 0;
 
 function initSortingIndeces(){
+    bubble_iterations = 0;
+    bubble_index_old = 0;
+    bubble_index2 = 0;
+    bubble_index2_old = 0;
     min = undefined;
     selection_index = 0;
     min_index = 0;
@@ -109,6 +114,9 @@ function bubbleSortStep(arr){
     } else if(swaps == 0){
         finished = true;
     } else {
+        vals[bubble_index - bubble_iterations].color = FINAL_COLOR;
+        Object.freeze(vals[bubble_index - bubble_iterations]);
+        bubble_iterations++;
         bubble_index = 0;
         swaps = 0;
     }
