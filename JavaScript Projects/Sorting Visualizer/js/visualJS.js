@@ -1,7 +1,7 @@
 var slider = document.getElementById('slider');
 
-slider.min = '50';
-slider.max = '200';
+slider.min = '20';
+slider.max = '100';
 slider.step = '5';
 slider.value = '60';
 
